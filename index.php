@@ -35,7 +35,7 @@
                         }
                     ?>
                     <tr>
-                        <td><a href=""><span class='material-symbols-outlined'>add</span></a></td>
+                        <td><a href="form.php"><span class='material-symbols-outlined'>add</span></a></td>
                     </tr>
                 </table>
             </div>
