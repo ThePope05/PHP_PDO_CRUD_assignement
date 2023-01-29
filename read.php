@@ -1,6 +1,6 @@
 <?php
 
-function retInfo($db, $tabel){
+function retInfo($db, $tabel, $customQuerry = null){
     include('config.php');
 
     $dsn = "mysql:host=$dbHost;dbname=$db;charset=UTF8";
@@ -11,7 +11,11 @@ function retInfo($db, $tabel){
         echo $e->getMessage();
     }
 
-    $sql = "SELECT * FROM $tabel";
+    if($customQuerry != null){
+        $sql = $customQuerry;
+    }else{
+        $sql = "SELECT * FROM $tabel";
+    }
 
     $statement = $pdo->prepare($sql);
 

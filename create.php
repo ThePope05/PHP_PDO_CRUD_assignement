@@ -41,3 +41,12 @@ $statement->bindValue(':postcode', $_POST['postcode'], PDO::PARAM_STR);
 $statement->bindValue(':landNaam', $_POST['landnaam'], PDO::PARAM_STR);
 
 $statement->execute();
+
+if($statement){
+        echo "Record is toegevoegd";
+        header('Refresh:3; url=index.php');
+    }
+    else{
+        echo "Record is niet toegevoegd";
+        header('Refresh:3; url=index.php');
+    }
